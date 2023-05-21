@@ -31,22 +31,47 @@ dependencies:
   flutter:
     sdk: flutter
 
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  supabase_flutter: ^1.9.2
+  cupertino_icons: ^1.0.5
+  flutter_html: ^2.2.1
   dio: ^5.1.1
   hooks_riverpod: ^2.3.2
   google_fonts: ^4.0.3
   cached_network_image: ^3.2.3
-  font_awesome_flutter: ^10.4.0
-  riverpod_lint: ^1.3.0
+  go_router:
+    git:
+      url: https://github.com/tolo/flutter_packages.git
+      ref: 477b47c9f7b09153fa83612a2b55078d3fd844b2
+      path: packages/go_router
 
+  #  go_router: ^7.0.1
+  font_awesome_flutter: ^10.4.0
+  path_provider: ^2.0.14
+  share_plus: ^6.3.1
+  shared_preferences: ^2.1.0
+  image_picker: ^0.8.7+1
+  animated_text_kit: ^4.2.2
+  freezed_annotation: ^2.2.0
+  riverpod_annotation: ^2.0.2
+  json_annotation: ^4.8.1
+  loading_animation_widget: ^1.2.0+4
+  #  comment_tree:
+  #    path: /Volumes/Passport/Projects/comment_tree
+  intl: ^0.18.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  modal_bottom_sheet: ^3.0.0-pre
+  riverpod_lint: ^1.3.0
+  flutter_rating_bar: ^4.0.1
+  shimmer: ^2.0.0
+  #  google_sign_in: ^6.1.0
+  the_apple_sign_in: ^1.1.1
+  auto_size_text: ^3.0.0
+  supabase_flutter: ^1.5.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -54,8 +79,15 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
-  freezed_annotation: ^2.2.0
-  riverpod_annotation: ^2.0.2
+  build_runner: ^2.3.3
+  riverpod_generator: ^2.1.4
+  freezed: ^2.3.2
+  json_serializable: ^6.6.1
+  hive_generator: ^2.0.0
+  custom_lint:
+
+
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
