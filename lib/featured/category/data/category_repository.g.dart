@@ -23,7 +23,7 @@ final categoryRepositoryProvider =
 );
 
 typedef CategoryRepositoryRef = AutoDisposeProviderRef<CategoryRepository>;
-String _$fetchCategoriesHash() => r'60a7a3b856d2a8bf03fe9067637db672637c3c42';
+String _$fetchCategoriesHash() => r'b3f332f8e2d539760983631d9cdd4a07d5cfff30';
 
 /// See also [fetchCategories].
 @ProviderFor(fetchCategories)

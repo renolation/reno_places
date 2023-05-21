@@ -13,7 +13,7 @@ List<CategoryEntity> listCategoryFromJson(String str) =>
 class CategoryEntity with _$CategoryEntity  {
 
 
-   factory CategoryEntity({
+   const factory CategoryEntity({
 
     int? id,
 
@@ -21,6 +21,7 @@ class CategoryEntity with _$CategoryEntity  {
 
     String? image,
 
+    @Default([])List<CategoryEntity> subcategories
 
 
   }) = _CategoryEntity;

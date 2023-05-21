@@ -10,15 +10,36 @@ part 'category_repository.g.dart';
 class CategoryRepository {
   CategoryRepository();
 
+  final _client = Supabase.instance.client;
   Future<List<CategoryEntity>> getCategories(SupabaseClient client) async {
-    final data = await client
-        .from('categories')
-        .select('*');
+    // final data = await client
+    //     .from('categories')
+    //     .select('*');
+
+    final data = await client.from('categories').select('id, name, subcategories(id, name)');
+
+
     print(data);
     final List list = data;
     return list.map((e) => CategoryEntity.fromJson(e)).toList();
   }
 
+  Future addCategory(String name) async{
+
+    final data = await _client
+        .from('categories')
+        .insert({'name': name, 'image': '554'});
+    print(data);
+    return data;
+  }
+  Future addSubCategory(String name, int parentId) async{
+
+    final data = await _client
+        .from('subcategories')
+        .insert({'name': name, 'image': '554', 'category_id': parentId});
+    print(data);
+    return data;
+  }
 }
 
 
