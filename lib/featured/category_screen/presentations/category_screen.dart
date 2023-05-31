@@ -24,7 +24,7 @@ class CategoryScreen extends HookConsumerWidget {
                     context: context,
                     builder: (context) {
                       return AlertDialog(
-                        title: Text('add category'),
+                        title: Text('add sub category'),
                         content: TextField(
                           controller: categoryController,
                         ),
@@ -34,6 +34,28 @@ class CategoryScreen extends HookConsumerWidget {
                           }, child: Text('cancel')),
                           TextButton(onPressed: (){
                             ref.read(categoryRepositoryProvider).addSubCategory('Test', 1);
+                          }, child: Text('OK')),
+                        ],
+                      );
+                    });
+              },
+              child: Text('add sub')),
+          TextButton(
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text('add category'),
+                        content: TextField(
+                          controller: categoryController,
+                        ),
+                        actions: [
+                          TextButton(onPressed: (){
+                            Navigator.pop(context);
+                          }, child: Text('cancel')),
+                          TextButton(onPressed: (){
+                            ref.read(categoryRepositoryProvider).addCategory('Food');
                           }, child: Text('OK')),
                         ],
                       );
