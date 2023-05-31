@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:reno_places/featured/category/data/category_repository.dart';
-import 'package:reno_places/featured/category/domains/category_entity.dart';
+import 'package:reno_places/featured/category_screen/data/category_repository.dart';
+import 'package:reno_places/featured/category_screen/domains/category_entity.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 

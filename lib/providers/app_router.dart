@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:reno_places/featured/category/presentations/category_screen.dart';
+import 'package:reno_places/featured/category_screen/presentations/category_screen.dart';
 import 'package:reno_places/featured/home_screen/presentations/home_screen.dart';
 
 enum AppRoute {

@@ -1,6 +1,6 @@
 
 
-import 'package:reno_places/featured/category/domains/category_entity.dart';
+import 'package:reno_places/featured/category_screen/domains/category_entity.dart';
 import 'package:reno_places/providers/supabase_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';

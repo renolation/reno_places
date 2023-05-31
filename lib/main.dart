@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:reno_places/featured/category/presentations/category_screen.dart';
 import 'package:reno_places/providers/app_router.dart';
 import 'package:reno_places/providers/supabase_provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
