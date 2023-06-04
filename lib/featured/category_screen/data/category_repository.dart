@@ -11,11 +11,16 @@ class CategoryRepository {
   CategoryRepository();
 
   final _client = Supabase.instance.client;
+
   Future<List<CategoryEntity>> getCategories(SupabaseClient client) async {
-    final data = await client.from('category').select('id, name, subcategory(id, name)');
+    // final data = await client.from('category').select('id, name, sub_category(id, name)');
+    final data = await client.from('category').select('id, name, sub_category(id, name)');
+
     final List list = data;
+    print(list);
     return list.map((e) => CategoryEntity.fromJson(e)).toList();
   }
+
   Future addCategory(String name) async{
     final data = await _client
         .from('category')

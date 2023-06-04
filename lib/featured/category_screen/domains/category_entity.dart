@@ -21,7 +21,7 @@ class CategoryEntity with _$CategoryEntity  {
 
     String? image,
 
-    @Default([])List<CategoryEntity> subcategories
+     @JsonKey(name: 'sub_category') List<CategoryEntity>? subCategories,
 
 
   }) = _CategoryEntity;

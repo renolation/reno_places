@@ -23,7 +23,8 @@ mixin _$CategoryEntity {
   int? get id => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   String? get image => throw _privateConstructorUsedError;
-  List<CategoryEntity> get subcategories => throw _privateConstructorUsedError;
+  @JsonKey(name: 'sub_category')
+  List<CategoryEntity>? get subCategories => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,7 +42,7 @@ abstract class $CategoryEntityCopyWith<$Res> {
       {int? id,
       String? name,
       String? image,
-      List<CategoryEntity> subcategories});
+      @JsonKey(name: 'sub_category') List<CategoryEntity>? subCategories});
 }
 
 /// @nodoc
@@ -60,7 +61,7 @@ class _$CategoryEntityCopyWithImpl<$Res, $Val extends CategoryEntity>
     Object? id = freezed,
     Object? name = freezed,
     Object? image = freezed,
-    Object? subcategories = null,
+    Object? subCategories = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -75,10 +76,10 @@ class _$CategoryEntityCopyWithImpl<$Res, $Val extends CategoryEntity>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      subcategories: null == subcategories
-          ? _value.subcategories
-          : subcategories // ignore: cast_nullable_to_non_nullable
-              as List<CategoryEntity>,
+      subCategories: freezed == subCategories
+          ? _value.subCategories
+          : subCategories // ignore: cast_nullable_to_non_nullable
+              as List<CategoryEntity>?,
     ) as $Val);
   }
 }
@@ -95,7 +96,7 @@ abstract class _$$_CategoryEntityCopyWith<$Res>
       {int? id,
       String? name,
       String? image,
-      List<CategoryEntity> subcategories});
+      @JsonKey(name: 'sub_category') List<CategoryEntity>? subCategories});
 }
 
 /// @nodoc
@@ -112,7 +113,7 @@ class __$$_CategoryEntityCopyWithImpl<$Res>
     Object? id = freezed,
     Object? name = freezed,
     Object? image = freezed,
-    Object? subcategories = null,
+    Object? subCategories = freezed,
   }) {
     return _then(_$_CategoryEntity(
       id: freezed == id
@@ -127,10 +128,10 @@ class __$$_CategoryEntityCopyWithImpl<$Res>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      subcategories: null == subcategories
-          ? _value._subcategories
-          : subcategories // ignore: cast_nullable_to_non_nullable
-              as List<CategoryEntity>,
+      subCategories: freezed == subCategories
+          ? _value._subCategories
+          : subCategories // ignore: cast_nullable_to_non_nullable
+              as List<CategoryEntity>?,
     ));
   }
 }
@@ -142,8 +143,8 @@ class _$_CategoryEntity implements _CategoryEntity {
       {this.id,
       this.name,
       this.image,
-      final List<CategoryEntity> subcategories = const []})
-      : _subcategories = subcategories;
+      @JsonKey(name: 'sub_category') final List<CategoryEntity>? subCategories})
+      : _subCategories = subCategories;
 
   factory _$_CategoryEntity.fromJson(Map<String, dynamic> json) =>
       _$$_CategoryEntityFromJson(json);
@@ -154,18 +155,20 @@ class _$_CategoryEntity implements _CategoryEntity {
   final String? name;
   @override
   final String? image;
-  final List<CategoryEntity> _subcategories;
+  final List<CategoryEntity>? _subCategories;
   @override
-  @JsonKey()
-  List<CategoryEntity> get subcategories {
-    if (_subcategories is EqualUnmodifiableListView) return _subcategories;
+  @JsonKey(name: 'sub_category')
+  List<CategoryEntity>? get subCategories {
+    final value = _subCategories;
+    if (value == null) return null;
+    if (_subCategories is EqualUnmodifiableListView) return _subCategories;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_subcategories);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
   String toString() {
-    return 'CategoryEntity(id: $id, name: $name, image: $image, subcategories: $subcategories)';
+    return 'CategoryEntity(id: $id, name: $name, image: $image, subCategories: $subCategories)';
   }
 
   @override
@@ -177,13 +180,13 @@ class _$_CategoryEntity implements _CategoryEntity {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.image, image) || other.image == image) &&
             const DeepCollectionEquality()
-                .equals(other._subcategories, _subcategories));
+                .equals(other._subCategories, _subCategories));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, image,
-      const DeepCollectionEquality().hash(_subcategories));
+      const DeepCollectionEquality().hash(_subCategories));
 
   @JsonKey(ignore: true)
   @override
@@ -204,7 +207,8 @@ abstract class _CategoryEntity implements CategoryEntity {
       {final int? id,
       final String? name,
       final String? image,
-      final List<CategoryEntity> subcategories}) = _$_CategoryEntity;
+      @JsonKey(name: 'sub_category')
+          final List<CategoryEntity>? subCategories}) = _$_CategoryEntity;
 
   factory _CategoryEntity.fromJson(Map<String, dynamic> json) =
       _$_CategoryEntity.fromJson;
@@ -216,7 +220,8 @@ abstract class _CategoryEntity implements CategoryEntity {
   @override
   String? get image;
   @override
-  List<CategoryEntity> get subcategories;
+  @JsonKey(name: 'sub_category')
+  List<CategoryEntity>? get subCategories;
   @override
   @JsonKey(ignore: true)
   _$$_CategoryEntityCopyWith<_$_CategoryEntity> get copyWith =>

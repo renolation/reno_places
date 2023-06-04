@@ -55,7 +55,7 @@ class CategoryScreen extends HookConsumerWidget {
                             Navigator.pop(context);
                           }, child: Text('cancel')),
                           TextButton(onPressed: (){
-                            ref.read(categoryRepositoryProvider).addCategory('Food');
+                            ref.read(categoryRepositoryProvider).addCategory(categoryController.text);
                           }, child: Text('OK')),
                         ],
                       );
@@ -73,9 +73,9 @@ class CategoryScreen extends HookConsumerWidget {
                 itemBuilder: (context, index) {
                   return ExpansionTile(
                       title: Text(data[index].name!),
-                    children: data[index].subcategories.map((subcategory) {
+                    children: data[index].subCategories!.map((subCategory) {
                       return ListTile(
-                        title: Text(subcategory.name!),
+                        title: Text(subCategory.name!),
                       );
                     }).toList(),
                   );

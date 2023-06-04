@@ -14,19 +14,22 @@ class PlaceScreen extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(
-        children: [
-          TextButton(
-            onPressed: () {
-              PlaceEntity placeEntity = PlaceEntity(
-                name: 'phuoc',
-              );
-              ref.read(placeRepositoryProvider).addPlace(placeEntity: placeEntity);
-            },
-            child: Text('Add'),
-          ),
-        ],
-      ),
+      body: Consumer(builder: (context, ref, child) {
+        final placesList = ref.watch(fetchPlacesProvider);
+
+        return placesList.when(data: (data){
+          return ListView.builder(
+              itemCount: data.length,
+              itemBuilder: (context, index){
+                return Text(data[index].name!);
+              });
+        },
+          error: (err, stack) => Text('Error $err'),
+          loading: () =>
+              Text('loading'),
+        );
+      }),
+      
     );
   }
 }
