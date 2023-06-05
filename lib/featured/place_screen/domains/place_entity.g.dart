@@ -14,8 +14,8 @@ _$_PlaceEntity _$$_PlaceEntityFromJson(Map<String, dynamic> json) =>
       category: json['category'] == null
           ? null
           : CategoryEntity.fromJson(json['category'] as Map<String, dynamic>),
-      lat: json['lat'] as int?,
-      lng: json['lng'] as int?,
+      lat: (json['lat'] as num?)?.toDouble(),
+      lng: (json['lng'] as num?)?.toDouble(),
       address: json['address'] as String?,
       note: json['note'] as String?,
     );

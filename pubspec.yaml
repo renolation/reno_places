@@ -67,6 +67,8 @@ dependencies:
   the_apple_sign_in: ^1.1.1
   auto_size_text: ^3.0.0
   supabase_flutter: ^1.5.0
+  google_maps_flutter: ^2.2.8
+  geolocator: ^9.0.2
 
 dev_dependencies:
   flutter_test:

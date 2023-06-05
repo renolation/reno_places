@@ -27,6 +27,12 @@ class HomeScreen extends HookConsumerWidget {
 
             );
           }, child: Text('Place')),
+          TextButton(onPressed: (){
+            context.pushNamed(
+              AppRoute.map.name,
+
+            );
+          }, child: Text('Map')),
         ],
       ),
     );

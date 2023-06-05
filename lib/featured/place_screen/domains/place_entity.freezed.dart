@@ -24,8 +24,8 @@ mixin _$PlaceEntity {
   String? get name => throw _privateConstructorUsedError;
   String? get image => throw _privateConstructorUsedError;
   CategoryEntity? get category => throw _privateConstructorUsedError;
-  int? get lat => throw _privateConstructorUsedError;
-  int? get lng => throw _privateConstructorUsedError;
+  double? get lat => throw _privateConstructorUsedError;
+  double? get lng => throw _privateConstructorUsedError;
   String? get address => throw _privateConstructorUsedError;
   String? get note => throw _privateConstructorUsedError;
 
@@ -46,8 +46,8 @@ abstract class $PlaceEntityCopyWith<$Res> {
       String? name,
       String? image,
       CategoryEntity? category,
-      int? lat,
-      int? lng,
+      double? lat,
+      double? lng,
       String? address,
       String? note});
 
@@ -96,11 +96,11 @@ class _$PlaceEntityCopyWithImpl<$Res, $Val extends PlaceEntity>
       lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       lng: freezed == lng
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       address: freezed == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -138,8 +138,8 @@ abstract class _$$_PlaceEntityCopyWith<$Res>
       String? name,
       String? image,
       CategoryEntity? category,
-      int? lat,
-      int? lng,
+      double? lat,
+      double? lng,
       String? address,
       String? note});
 
@@ -187,11 +187,11 @@ class __$$_PlaceEntityCopyWithImpl<$Res>
       lat: freezed == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       lng: freezed == lng
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as double?,
       address: freezed == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -229,9 +229,9 @@ class _$_PlaceEntity implements _PlaceEntity {
   @override
   final CategoryEntity? category;
   @override
-  final int? lat;
+  final double? lat;
   @override
-  final int? lng;
+  final double? lng;
   @override
   final String? address;
   @override
@@ -283,8 +283,8 @@ abstract class _PlaceEntity implements PlaceEntity {
       final String? name,
       final String? image,
       final CategoryEntity? category,
-      final int? lat,
-      final int? lng,
+      final double? lat,
+      final double? lng,
       final String? address,
       final String? note}) = _$_PlaceEntity;
 
@@ -300,9 +300,9 @@ abstract class _PlaceEntity implements PlaceEntity {
   @override
   CategoryEntity? get category;
   @override
-  int? get lat;
+  double? get lat;
   @override
-  int? get lng;
+  double? get lng;
   @override
   String? get address;
   @override

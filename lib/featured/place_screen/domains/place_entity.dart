@@ -24,9 +24,9 @@ class PlaceEntity with _$PlaceEntity  {
 
     CategoryEntity? category,
 
-    int? lat,
+    double? lat,
 
-    int? lng,
+    double? lng,
 
     String? address,
 

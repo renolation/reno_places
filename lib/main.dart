@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:reno_places/providers/app_router.dart';
 import 'package:reno_places/providers/supabase_provider.dart';
@@ -13,6 +14,7 @@ void main() async {
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvcnJzY25sYWt4YWd6a2VlY2VvIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQ1NzM3NTUsImV4cCI6MjAwMDE0OTc1NX0.nYFwZLQDtjohUEBn1-uaxFE1D_W0xNh4LP5ic1mNXkY',
   );
   final supabase = Supabase.instance.client;
+
 
 
   runApp(ProviderScope(
